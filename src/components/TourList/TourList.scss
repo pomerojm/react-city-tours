@@ -1,0 +1,30 @@
+.tourlist{
+    width: 70vw;
+    margin: 0 auto; // center the item
+    padding: 2rem 0; //rems are responsive
+}
+
+// style above is used up to width of 768px
+// and style above is inherited below unless overwritten below
+@media screen and (min-width:768px) {
+    .tourlist {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1.5rem;
+    }
+}
+@media screen and (min-width:992px) {
+    .tourlist {
+        width: 85vw;
+        // display: grid;  inherited from smaller screen @media
+        grid-template-columns: 1fr 1fr 1fr;
+        // grid-column-gap: 1.5rem; inherited from smaller screen @media
+    }
+}
+@media screen and (min-width:1140px) {
+    .tourlist {
+        // display: grid;  inherited from smaller screen @media
+        grid-template-columns: repeat(4, 1fr);
+        // grid-column-gap: 1.5rem; inherited from smaller screen @media
+    }
+}
